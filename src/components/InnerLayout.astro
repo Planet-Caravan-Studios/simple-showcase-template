@@ -1,0 +1,54 @@
+---
+import Info from '../components/Info.astro';
+import Sandbox from '../components/Sandbox.astro';
+
+interface Props {
+	title: string;
+	body: string;
+	href: string;
+}
+
+const { href, title, body } = Astro.props;
+---
+
+<div class="InnerLayout">
+	<div class="left">
+		<Info/>
+	</div>
+	<div class="right">
+		<Sandbox/>
+	</div>
+</div>
+
+<style lang="scss">
+
+	.InnerLayout{
+		display: flex;
+		width: 100%;
+		height: calc(100vh - 50px);
+		border: solid var(--border-width) var(--border-color);
+
+		/*LEFT SECTION*/
+		.left{
+			width: 100%;
+			max-width:500px;
+			height: 100%;
+			border-right: solid var(--border-width) var(--border-color);
+			display: flex;
+			justify-content: center;
+			align-items: flex-start;
+			
+		}
+
+		/*RIGHT SECTION*/
+		.right{
+			width: 100%;
+			max-width:calc(100% - 500px);
+			height: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding:var(--padding-1);
+		}
+	}
+</style>
