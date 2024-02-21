@@ -45,22 +45,6 @@ const { title } = Astro.props;
 		--accent-color-light: #EAE9E6;
 		--padding-1: 1rem;
 	}
-	@font-face {
-	    font-family: 'uav_osd_sans_monoregular';
-	    src: url('/uav-osd-sans-mono.woff2') format('woff2'),
-	         url('/uav-osd-sans-mono.woff') format('woff');
-	    font-weight: normal;
-	    font-style: normal;
-
-	}
-	@font-face {
-	    font-family: 'uav_osd_monoregular';
-	    src: url('/uav-osd-mono.woff2') format('woff2'),
-	         url('/uav-osd-mono.woff') format('woff');
-	    font-weight: normal;
-	    font-style: normal;
-
-	}
 	.kode-mono{
 	  font-family: "Kode Mono", monospace;
 	  font-optical-sizing: auto;
@@ -73,14 +57,13 @@ const { title } = Astro.props;
 	}
 
 	html {
-		/*font-family: "UAV", system-ui, sans-serif;
-		font-family: 'uav_osd_sans_monoregular';*/
+
 		font-family: "Kode Mono", monospace;
 		background: var(--background-color);
 		color: var(--text-color);
 	}
 	h1, h2, h3, h4, h5, h6{
-		font-family: 'uav_osd_monoregular';
+		font-family: "Kode Mono", monospace;
 	}
 
 	
