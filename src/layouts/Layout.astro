@@ -7,7 +7,7 @@ const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="light">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description" />
@@ -43,7 +43,15 @@ const { title } = Astro.props;
 		--text-color: #28282B;
 		--accent-color: #28282B;
 		--accent-color-light: #EAE9E6;
-		--padding-1: 1rem;
+		--padding-1: 1rem;			
+	}
+	/*dark mode*/
+	[data-theme="dark"] {
+		--border-color: #DAD9D6;
+		--background-color: #28282B;
+		--text-color: #DAD9D6;
+		--accent-color: #DAD9D6;
+		--accent-color-light: #08080B;
 	}
 	.kode-mono{
 	  font-family: "Kode Mono", monospace;
